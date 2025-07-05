@@ -11,7 +11,7 @@
     #quiz-box {
       position: absolute;
       top: 10px;
-      left: 10px;
+      left: 10px; /* ALTIJD linksboven */
       background: #fff;
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -98,11 +98,6 @@
       document.getElementById("antwoord").value = "";
       document.getElementById("feedback").textContent = "";
       tweedeKans = false;
-
-      const rechts = ["1", "2", "3"];
-      const quizBox = document.getElementById("quiz-box");
-      quizBox.style.left = rechts.includes(huidigeVraag) ? "auto" : "10px";
-      quizBox.style.right = rechts.includes(huidigeVraag) ? "10px" : "auto";
     }
 
     function controleerAntwoord() {
